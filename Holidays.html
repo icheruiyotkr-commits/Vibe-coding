@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holidays</title>
+</head>
+<body>
+    <h1>Holidays</h1>
+
+    <!-- Navigation -->
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Employee Directory</a> |
+        <a href="clock.html">Time Clock</a> |
+        <a href="holidays.html">Holidays</a> |
+        <a href="payroll.html">Payroll</a> |
+    <a href="data-management.html">Data Management</a>
+    </div>
+
+    <!-- Year Selector -->
+    <div style="margin-bottom: 20px;">
+        <label for="yearSelect">Year:</label>
+        <select id="yearSelect" onchange="changeYear()">
+            <option value="2025">2025</option>
+            <option value="2026" selected>2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+        </select>
+        <button onclick="loadYearHolidays()">Load Holidays</button>
+    </div>
+
+    <h2>Add Holiday</h2>
+
+    <!-- Add Holiday Form -->
+    <div>
+        <label for="holidayName">Holiday Name:</label>
+        <input type="text" id="holidayName" placeholder="e.g., Idd-ul-Fitr">
+    </div>
+
+    <div style="margin-top: 10px;">
+        <label for="holidayDate">Date:</label>
+        <input type="date" id="holidayDate">
+    </div>
+
+    <div style="margin-top: 10px;">
+        <button onclick="addHoliday()">Add Holiday</button>
+    </div>
+
+    <h2>Holiday List</h2>
+    <table id="holidayTable" border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Holiday Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="holidays.js"></script>
+</body>
+</html>

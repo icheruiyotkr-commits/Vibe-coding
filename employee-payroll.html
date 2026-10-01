@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Payroll Details</title>
+</head>
+<body>
+    <h1>Employee Payroll Details</h1>
+
+    <!-- Navigation -->
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Employee Directory</a> |
+        <a href="clock.html">Time Clock</a> |
+        <a href="holidays.html">Holidays</a> |
+        <a href="payroll.html">Payroll</a> |
+    <a href="data-management.html">Data Management</a>
+    </div>
+
+    <!-- Employee Info -->
+    <div id="employeeInfo" style="margin-bottom: 20px; padding: 10px; background: #f5f5f5; border: 1px solid #ddd;">
+        <strong>Employee:</strong> <span id="employeeName"></span> (ID: <span id="employeeId"></span>)<br>
+        <strong>Week:</strong> <span id="weekRange"></span><br>
+        <strong>Daily Rate:</strong> KES <span id="dailyRate"></span>
+    </div>
+
+    <!-- Daily Breakdown Table -->
+    <h2>Daily Breakdown</h2>
+    <table id="detailsTable" border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Date</th>
+                <th>Clock In</th>
+                <th>Clock Out</th>
+                <th>Hours Worked</th>
+                <th>Regular Hours</th>
+                <th>Overtime Hours</th>
+                <th>Rate</th>
+                <th>Regular Pay</th>
+                <th>Overtime Pay</th>
+                <th>Total Pay</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Weekly Totals -->
+    <div id="weeklyTotals" style="margin-top: 20px; padding: 15px; background: #e8f5e9; border: 2px solid #4caf50; font-size: 1.1em;">
+        <h3 style="margin-top: 0;">Weekly Totals</h3>
+        <div>Total Hours: <strong id="totalHours"></strong></div>
+        <div>Regular Hours: <strong id="totalRegularHours"></strong></div>
+        <div>Overtime Hours: <strong id="totalOvertimeHours"></strong></div>
+        <div>Regular Pay: KES <strong id="totalRegularPay"></strong></div>
+        <div>Overtime Pay: KES <strong id="totalOvertimePay"></strong></div>
+        <div style="font-size: 1.3em; margin-top: 10px; color: #2e7d32;">Total Pay: KES <strong id="totalPay"></strong></div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <button onclick="window.history.back()">← Back to Payroll</button>
+    </div>
+
+    <script src="payroll.js"></script>
+</body>
+</html>

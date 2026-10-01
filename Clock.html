@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Clock</title>
+</head>
+<body>
+    <h1>Time Clock</h1>
+
+    <!-- Navigation -->
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Employee Directory</a> |
+        <a href="clock.html">Time Clock</a> |
+        <a href="holidays.html">Holidays</a> |
+        <a href="payroll.html">Payroll</a> |
+    <a href="data-management.html">Data Management</a>
+    </div>
+
+    <h2>Clock In / Clock Out</h2>
+
+    <!-- Employee Selection -->
+    <div>
+        <label for="employeeSelect">Select Employee:</label>
+        <input type="text" id="employeeSelect" list="employeeList" placeholder="Search by name or ID...">
+        <datalist id="employeeList">
+            <!-- Options will be added by JavaScript -->
+        </datalist>
+    </div>
+
+    <!-- Clock Buttons -->
+    <div style="margin-top: 10px;">
+        <button onclick="clockIn()">Clock In</button>
+        <button onclick="clockOut()">Clock Out</button>
+    </div>
+
+    <h2>Today's Clock Records</h2>
+    <table id="clockTable" border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Action</th>
+                <th>Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="attendance.js"></script>
+</body>
+</html>

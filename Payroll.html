@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll Summary</title>
+</head>
+<body>
+    <h1>Payroll Summary</h1>
+
+    <!-- Navigation -->
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Employee Directory</a> |
+        <a href="clock.html">Time Clock</a> |
+        <a href="holidays.html">Holidays</a> |
+        <a href="payroll.html">Payroll</a> |
+    <a href="data-management.html">Data Management</a>
+    </div>
+
+    <!-- Week Selector -->
+    <div style="margin-bottom: 20px;">
+        <label for="weekDate">Select any date in the week:</label>
+        <input type="date" id="weekDate" onchange="calculatePayroll()">
+        <span id="weekRange" style="margin-left: 10px; font-weight: bold;"></span>
+    </div>
+
+    <!-- Payroll Table -->
+    <h2>Week Summary</h2>
+    <table id="payrollTable" border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Total Hours</th>
+                <th>Regular Hours</th>
+                <th>Overtime Hours</th>
+                <th>Regular Pay (KES)</th>
+                <th>Overtime Pay (KES)</th>
+                <th>Total Pay (KES)</th>
+		<th>Status</th>
+   		<th>Actions</th>
+
+              
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="totalPayroll" style="margin-top: 20px; font-size: 1.2em; font-weight: bold;"></div>
+
+    <script src="payroll.js"></script>
+</body>
+</html>

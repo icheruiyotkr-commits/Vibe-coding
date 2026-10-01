@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Management</title>
+</head>
+
+<body>
+
+    <h1>Data Management</h1>
+
+    <!-- Navigation -->
+    <div style="margin-bottom: 20px;">
+        <a href="index.html">Employee Directory</a> |
+        <a href="clock.html">Time Clock</a> |
+        <a href="holidays.html">Holidays</a> |
+        <a href="payroll.html">Payroll</a> |
+        <a href="data-management.html">Data Management</a>
+    </div>
+
+    <hr>
+
+    <h2>Export Data</h2>
+
+    <p>
+        Export the current ERP data to a file for backup or testing.
+    </p>
+
+    <button onclick="exportData()">
+        Export Data
+    </button>
+
+    <hr>
+
+    <h2>Import Data</h2>
+
+    <p>
+        Import a previously exported ERP data file or a prepared test dataset.
+    </p>
+
+    <input
+        type="file"
+        id="importFile"
+        accept=".json"
+    >
+
+    <button onclick="importData()">
+        Import Data
+    </button>
+
+    <hr>
+
+    <h2>Danger Zone</h2>
+
+    <p>
+        This will remove the current prototype data stored in this browser.
+    </p>
+
+    <button
+        onclick="clearAllData()"
+        style="background-color: #d32f2f; color: white; padding: 10px;"
+    >
+        Clear Prototype Data
+    </button>
+
+    <p id="message"></p>
+
+    <script src="data-management.js"></script>
+
+</body>
+</html>
